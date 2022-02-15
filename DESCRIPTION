@@ -1,0 +1,19 @@
+Package: DataProduct
+Title: A NMFS Data Product
+Date: 2022-02-14
+Version: 1.0
+Authors@R: c(person("Elizabeth", "Holmes", , "eli.holmes@noaa.gov", role = c("aut", "cre")), person("Another", "Contributor", role="aut"))
+URL: https://rverse-tutorials.github.io/DataProduct, https://github.com/rverse-tutorials/DataProduct
+BugReports: https://github.com/rverse-tutorials/DataProduct/issues
+Description: This is an expample NMFS branded R data package with a pkgdown website.
+Depends: R (>= 4.0.0)
+Suggests: 
+    rmarkdown,
+    knitr
+Imports: stats, graphics
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr

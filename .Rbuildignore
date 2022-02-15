@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+Readme.Rmd
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
+^pkgdownTemplate\.Rcheck$
+^pkgdownTemplate.*\.tar\.gz$
+^pkgdownTemplate.*\.tgz$
+^DataProduct\.Rcheck$
+^DataProduct.*\.tar\.gz$
+^DataProduct.*\.tgz$
