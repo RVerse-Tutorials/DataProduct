@@ -33,6 +33,7 @@ install those.
 5.  Type the code `pkgdown::build_site()` and make sure the **pkgdown**
     building works. If on RStudio Cloud, you will need to use
     `pkgdown::build_site(override = list(destination = "~/docs"))` to
+    see the webpage.
 
 Note steps 3 and 4 are to make sure your computer is set up to build and
 check packages. As long as you haven’t edited the package yet, it will
@@ -121,7 +122,7 @@ commercial product or activity by DOC or the United States Government.”
 
 ------------------------------------------------------------------------
 
-<img src="https://raw.githubusercontent.com/nmfs-general-modeling-tools/nmfspalette/main/man/figures/noaa-fisheries-rgb-2line-horizontal-small.png" height="75" alt="NOAA Fisheries">
+<img src="https://raw.githubusercontent.com/nmfs-general-modeling-tools/nmfspalette/main/man/figures/noaa-fisheries-rgb-2line-horizontal-small.png" width="200" alt="NOAA Fisheries">
 
 [U.S. Department of Commerce](https://www.commerce.gov/) \| [National
 Oceanographic and Atmospheric Administration](https://www.noaa.gov) \|

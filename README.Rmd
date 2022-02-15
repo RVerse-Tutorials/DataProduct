@@ -25,7 +25,7 @@ The instructions will use the **usethis** and **pkgdown** packages. So install t
   * The Configure popup box for Roxygen will probably appear, if not click the Configure button. Check all the checkboxes.
 3. On the Build tab, click Install and Restart to make sure it builds.
 4. On the Build tab, click Check to make sure it passes all the checks.
-5. Type the code `pkgdown::build_site()` and make sure the **pkgdown** building works. If on RStudio Cloud, you will need to use `pkgdown::build_site(override = list(destination = "~/docs"))` to 
+5. Type the code `pkgdown::build_site()` and make sure the **pkgdown** building works. If on RStudio Cloud, you will need to use `pkgdown::build_site(override = list(destination = "~/docs"))` to see the webpage.
 
 Note steps 3 and 4 are to make sure your computer is set up to build and check packages. As long as you haven't edited the package yet, it will build and pass check.
 
