@@ -23,3 +23,4 @@ This part is the description. It can be as long as you want but usually is one p
 \examples{
 samplefunction(1)
 }
+\keyword{functions}

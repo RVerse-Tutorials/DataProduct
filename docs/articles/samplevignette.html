@@ -151,20 +151,69 @@
 <pre><code><span class="co">## The following object is masked from 'package:datasets':</span>
 <span class="co">## </span>
 <span class="co">##     cars</span></code></pre>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">figcap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"This figure uses DataProduct version"</span>, <span class="fu"><a href="https://rdrr.io/r/utils/packageDescription.html" class="external-link">packageVersion</a></span><span class="op">(</span><span class="st">"DataProduct"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">tabcap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"This table uses DataProduct version"</span>, <span class="fu"><a href="https://rdrr.io/r/utils/packageDescription.html" class="external-link">packageVersion</a></span><span class="op">(</span><span class="st">"DataProduct"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Here you can show uses worked up examples for your package. The easiest way to make a new package is to use <code>usethis::use_vignette("nameofvignette")</code>.</p>
 <div class="section level2">
-<h2 id="lets-make-a-plot">Let’s make a plot!<a class="anchor" aria-label="anchor" href="#lets-make-a-plot"></a>
+<h2 id="lets-make-a-plot">Let’s make a plot<a class="anchor" aria-label="anchor" href="#lets-make-a-plot"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va">stats</span><span class="op">)</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>
-<span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">10</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">x</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>
-<span class="fu"><a href="../reference/sampleplot.html">sampleplot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## (Intercept)           x </span>
-<span class="co">##    9.745572    3.360633</span></code></pre>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">cars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">hp</span>, y<span class="op">=</span><span class="va">mpg</span>, col<span class="op">=</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<img src="samplevignette_files/figure-html/unnamed-chunk-1-1.png" alt="This figure uses DataProduct version 1.0" width="576"><p class="caption">
+This figure uses DataProduct version 1.0
+</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="lets-make-a-table">Let’s make a table<a class="anchor" aria-label="anchor" href="#lets-make-a-table"></a>
+</h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/title.html" class="external-link">title</a></span><span class="op">(</span><span class="fu"><a href="../reference/samplefunction.html">samplefunction</a></span><span class="op">(</span><span class="st">"x versus y"</span>, y<span class="op">=</span><span class="st">"10 vals"</span>, z<span class="op">=</span><span class="st">"green"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="samplevignette_files/figure-html/unnamed-chunk-1-1.png" width="700" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/" class="external-link">knitr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>
+  <span class="va">iris2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">Species</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize</a></span><span class="op">(</span>
+      mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Sepal.Length</span><span class="op">)</span>, 
+      var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">Sepal.Length</span><span class="op">)</span>,
+      min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">Sepal.Length</span><span class="op">)</span>,
+      max <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">Sepal.Length</span><span class="op">)</span><span class="op">)</span>, caption<span class="op">=</span><span class="va">tabcap</span><span class="op">)</span></code></pre></div>
+<table class="table">
+<caption>This table uses DataProduct version 1.0</caption>
+<thead><tr class="header">
+<th align="left">Species</th>
+<th align="right">mean</th>
+<th align="right">var</th>
+<th align="right">min</th>
+<th align="right">max</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">setosa</td>
+<td align="right">5.006</td>
+<td align="right">0.1242490</td>
+<td align="right">4.3</td>
+<td align="right">5.8</td>
+</tr>
+<tr class="even">
+<td align="left">versicolor</td>
+<td align="right">5.936</td>
+<td align="right">0.2664327</td>
+<td align="right">4.9</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="odd">
+<td align="left">virginica</td>
+<td align="right">6.588</td>
+<td align="right">0.4043429</td>
+<td align="right">4.9</td>
+<td align="right">7.9</td>
+</tr>
+</tbody>
+</table>
 </div>
   </div>
 

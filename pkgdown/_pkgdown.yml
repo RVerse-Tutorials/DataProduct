@@ -45,8 +45,12 @@ navbar:
         href: Scoping.pdf
 
 reference:
+- title: Data
 - contents:
   - has_keyword("datasets")
+- title: Functions
+- contents:
+  - has_keyword("functions")
 
 news:
   releases:

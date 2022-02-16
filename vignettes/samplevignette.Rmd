@@ -9,16 +9,32 @@ vignette: >
 
 ```{r setup}
 library(DataProduct)
+figcap <- paste("This figure uses DataProduct version", packageVersion("DataProduct"))
+tabcap <- paste("This table uses DataProduct version", packageVersion("DataProduct"))
 ```
 
 Here you can show uses worked up examples for your package. The easiest way to make a new package is to use `usethis::use_vignette("nameofvignette")`.
 
-## Let's make a plot!
+## Let's make a plot
 
-```{r fig.align="center"}
-require(stats)
-x <- runif(10)
-y <- 10 + 3*x + rnorm(10)
-sampleplot(x, y)
-title(samplefunction("x versus y", y="10 vals", z="green"))
+```{r fig.align="center", fig.cap=figcap, fig.width=6}
+library(ggplot2)
+ggplot(cars, aes(x=hp, y=mpg, col=cyl)) + geom_point()
 ```
+
+## Let's make a table
+
+```{r message=FALSE}
+library(knitr)
+library(dplyr)
+kable(
+  iris2 %>% 
+    group_by(Species) %>% 
+    summarize(
+      mean = mean(Sepal.Length), 
+      var = var(Sepal.Length),
+      min = min(Sepal.Length),
+      max = max(Sepal.Length)), caption=tabcap)
+```
+
+

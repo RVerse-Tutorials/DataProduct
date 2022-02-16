@@ -22,3 +22,4 @@ x <- 1:10
 y <- 10+3*x + stats::rnorm(10, 0, 10)
 sampleplot(x, y)
 }
+\keyword{functions}

@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   samplevignette: samplevignette.html
-last_built: 2022-02-15T03:36Z
+last_built: 2022-02-16T03:28Z
 urls:
   reference: https://RVerse-Tutorials.github.io/DataProduct/reference
   article: https://RVerse-Tutorials.github.io/DataProduct/articles

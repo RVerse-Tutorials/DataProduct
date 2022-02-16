@@ -9,6 +9,7 @@
 #' @return A string with the values.
 #' @examples
 #' samplefunction(1)
+#' @keywords functions
 #' @export
 samplefunction <- function(x, y=10, z=c("yellow", "red", "green")){
   z <- match.arg(z)

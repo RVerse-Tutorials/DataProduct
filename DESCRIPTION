@@ -9,7 +9,8 @@ Description: This is an expample NMFS branded R data package with a pkgdown webs
 Depends: R (>= 4.0.0)
 Suggests: 
     rmarkdown,
-    knitr
+    knitr,
+    tidyverse
 Imports: stats, graphics
 License: GPL-3 + file LICENSE
 Encoding: UTF-8

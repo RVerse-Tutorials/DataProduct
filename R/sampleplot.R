@@ -9,6 +9,7 @@
 #' x <- 1:10
 #' y <- 10+3*x + stats::rnorm(10, 0, 10)
 #' sampleplot(x, y)
+#' @keywords functions
 #' @export
 sampleplot <- function(x, y){
   the.lm <- stats::lm(y ~ x)
